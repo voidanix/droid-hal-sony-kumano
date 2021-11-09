@@ -24,5 +24,15 @@ Requires: droid-system
 
 %define droid_src_build 1
 
+%define straggler_files \
+/persist \
+/product \
+/product_services \
+/sdcard \
+/bugreports \
+/cache \
+/d
+%{nil}
+
 Source99: droid-hal-common.inc
 
