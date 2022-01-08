@@ -28,7 +28,6 @@ Requires: droid-system
 /system_ext \
 /persist \
 /product \
-/product_services \
 /sdcard \
 /bugreports \
 /cache \
