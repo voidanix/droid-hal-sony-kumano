@@ -17,7 +17,7 @@
 %{nil}
 
 # On Android 8+ the system partition is (intended to be) mounted on /.
-%define makefstab_skip_entries / /vendor /product /system
+%define makefstab_skip_entries / /product /system /system_ext /vendor
 Requires: droid-system
 
 %define pre_actions /bin/sh setup-sources.sh
@@ -25,13 +25,13 @@ Requires: droid-system
 %define droid_src_build 1
 
 %define straggler_files \
-/persist \
-/product \
-/product_services \
-/sdcard \
 /bugreports \
 /cache \
-/d
+/d \
+/persist \
+/sdcard \
+/system_ext \
+/product \
 %{nil}
 
 Source99: droid-hal-common.inc
